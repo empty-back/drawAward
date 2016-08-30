@@ -31,7 +31,7 @@
             };
 
             $(document).ready(function(){
-                 $(".wrappertop").before('<div class="load-container load7"><div class="loader">Loading...</div></div>');
+                 
                 setTimeout(function(){ $(".load7").fadeOut("fast");},1000);
                 audioEngine.init('1.mp3');
                 //动态添加大转盘的奖品与奖品区域背景颜色
@@ -335,7 +335,7 @@
             //页面所有元素加载完毕后执行drawRouletteWheel()方法对转盘进行渲染
             window.onload=function(){
                 drawRouletteWheel();
-               
+               $(".wrappertop").before('<div class="load-container load7"><div class="loader">Loading...</div></div>');
 
             };
             $(function(){
