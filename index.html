@@ -146,7 +146,7 @@
             };
 
             $(document).ready(function(){
-                 
+                 $(".load7").show();
                 setTimeout(function(){ $(".load7").fadeOut("fast");},1000);
                 audioEngine.init('1.mp3');
                 //动态添加大转盘的奖品与奖品区域背景颜色
@@ -682,7 +682,7 @@
 </head>
 
 <body>
-<div class="load-container load7"><div class="loader">Loading...</div></div>
+<div class="load-container load7" style="display:none"><div class="loader">Loading...</div></div>
 <div class="wrapper wrappertop">
     <img src="wrapper-1.png" alt="" width="100%">
 </div>
