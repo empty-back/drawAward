@@ -124,7 +124,9 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-
+body{
+   font-family: '微软雅黑';
+}
 .overlay {
   background: rgba(0, 0, 0, 0.3);
   width: 100%;
