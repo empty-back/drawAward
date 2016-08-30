@@ -334,7 +334,7 @@
             //页面所有元素加载完毕后执行drawRouletteWheel()方法对转盘进行渲染
             window.onload=function(){
                 drawRouletteWheel();
-
+                $(".wrappertop").before('<div class="load-container load7"><div class="loader">Loading...</div></div>');
 
             };
             $(function(){
@@ -611,7 +611,7 @@
         }
        .footer-title h6{
            width: 80%;
-           overflow: hidden;
+           overflow-x: hidden;
            white-space: nowrap;
            text-overflow: ellipsis;
            margin: 0 auto;
