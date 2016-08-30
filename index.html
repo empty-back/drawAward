@@ -31,7 +31,7 @@
             };
 
             $(document).ready(function(){
-                //setTimeout(function(){ $(".load7").fadeOut("fast");},1000);
+                setTimeout(function(){ $(".load7").fadeOut("fast");},1000);
                 audioEngine.init('1.mp3');
                 //动态添加大转盘的奖品与奖品区域背景颜色
                 turnplate.restaraunts = ["未中奖", "流量30M", "雅芳爱倍加保湿密", "流量50M", "AVON小黑裙创意U盘", "流量100M", "米奇随手瓶", "米奇米妮二入陶瓷水杯组"];
@@ -349,7 +349,7 @@
                 };
                 rootScroll = function(){
 
-                    $(".load7").css({'top': $(window).scrollTop() +'px',"height":$(window).height()+'px'});
+                    $(".load7").css({'top': $(window).height()/3 +'px',"height":$(window).height()+'px'});
                 };
                 rootScroll();
                 rootResize();
