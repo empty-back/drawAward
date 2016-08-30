@@ -17,7 +17,122 @@
     <script type="text/javascript" src="audioEngine.js"></script>
         
     <script src="./awardRotate.js"></script>
+    <style>
+       body{
+            width: 100%;
+            max-width: 640px;
+            margin: 0 auto;
+            overflow-y: auto;
+            min-height: 100%;
+            background-color: #e81b1b;
+            font-family: '微软雅黑';
+        }
+       .load7{
+           color:#fff;
+           position: absolute;
+           z-index: 999;
+           width: 100%;
+           margin:0 auto;
+           height: 100%;
+           background: #e81b1b;
+           vertical-align: middle;
+           padding-top: 45%;
+       }
+        .wrapper {
+            width: 100%;
+            margin: 0 auto;
+            max-width: 640px;
+            overflow: hidden;
+            position: relative;
+        }
+        .wrapperfoot{
 
+           margin-top: -3rem;
+        }
+        .footer-title{
+            width: 50%;
+            max-width: 640px;
+            color: #fff;
+            text-align: center;
+            font-size: 0.6rem;
+            margin: -0.3rem auto 0.2rem auto;
+            padding: 0.6rem 0px;
+            font-family: '微软雅黑';
+            letter-spacing: 2px;
+            background-color: #c71717;
+           /* border: 1px solid #ffb820;*/
+            border-radius: 2rem;
+        }
+       .footer-title h6{
+           width: 80%;
+           padding-top:1px;
+           overflow-x: hidden;
+           white-space: nowrap;
+           text-overflow: ellipsis;
+           margin: 0 auto;
+       }
+        .footer-title h6 span{
+            color: #ffb820;
+        }
+        .footer-content{
+            width: 70%;
+            max-width: 640px;
+            color: #fab120;
+            margin: 0px auto 2rem auto;
+            padding: 10px 5%;
+            line-height: 2rem;
+            font-size: 0.5rem;
+            font-family: '微软雅黑';
+            background-color: #b21b1b;
+        }
+        .footer-hr-title{
+            width: 80%;
+            height:2px;
+            max-width: 640px;
+            color: #fff;
+            margin: 2rem auto 1rem auto;
+            text-align: center;
+            font-size: 0.8rem;
+            font-family: '微软雅黑';
+            background-color: #ffb820;
+        }
+        .footer-hr-title p{
+
+            position: relative;
+            top:-10px;
+            background-color: #e81b1b;
+            margin: 0 auto;
+            height: 20px;
+            line-height: 20px;
+            width: 120px;
+            text-overflow: ellipsis;
+            color: #ffb820;
+            font-size: 0.7rem;
+            letter-spacing: 2px;
+        }
+        #mark{width: 100%;height: 100%;background: rgba(0,0,0,0.5);position: fixed;top: 0;left: 0;display: none;z-index: 10;}
+        .layerbox{position:absolute;top:0;left:2.5rem;width:100%;display: none;}
+        .layerbox-flag{position:relative;width:20%;margin:0 auto;top:2rem;z-index: 999;}
+        .layerbox-close{width: 1rem;position: absolute;right: 5px;top: 5px;z-index: 999;float: right;}
+        .layerbox-content{width: 60%;height: auto;text-align:center;background: #fff url("yes.png") no-repeat 1em 1em;background-size:20% 20%;padding:3em 2em 1em 2em;position: relative;z-index:998;margin: 0 auto;-webkit-background-clip: padding-box;background-clip: padding-box;border: 1px solid rgba(0,0,0,.2);border-radius: 6px;outline: 0;-webkit-box-shadow: 0 3px 9px rgba(0,0,0,.5);box-shadow: 0 3px 9px rgba(0,0,0,.5);}
+        .firstp{width:100%;font-size: 0.8rem;padding-bottom: 1em;text-overflow:ellipsis; -o-text-overflow:ellipsis;white-space:nowrap;}
+        .singlep{width:100%;font-size: 0.7rem;color: #666;text-overflow:ellipsis; -o-text-overflow:ellipsis;white-space:nowrap;}
+        .layerbox-content span{color: #f22020}
+       .layerbox-content h3{width:100%;font-size: 0.8rem;padding-bottom: 1em;text-overflow:ellipsis; -o-text-overflow:ellipsis;white-space:nowrap;}
+        /*.layerbox-content h5{position: relative;bottom: -1em;}*/
+        .redtext{color: #f22020}
+        .top2em{padding-top: 2em;padding-bottom: 1em}
+        #qrdh{width:80%;padding:1em;background-color: #ffb820;border-radius: 2rem;color: #fff;border:0;outline: none;}
+        #wzdl{width:80%;padding:1em;background-color: #ffb820;border-radius: 2rem;color: #fff;border:0;outline: none;}
+        .coinsl{width: 4rem;height:1.6em;border:0;text-align: center;z-index: 999;position: relative;padding: 0.5em;outline: none;}
+        .reduce{width: 2rem;height:2.5em;overflow:hidden;text-align:left;background-color: #ffb820;border-radius: 2rem;color: #fff;border:0;outline: none;position: relative;right: -1.2rem;top: 0}
+        .add{width: 2rem;height:2.5em;overflow:hidden;text-align:right;background-color: #ffb820;border-radius: 2rem;color: #fff;border:0;outline: none;position: relative;left:-1.2rem;top: 0}
+        /*.banner{display:block;width:80%;margin-left:auto;margin-right:auto;margin-bottom: 20px;}*/
+        /*.banner .turnplate{display:block;width:100%;position:relative;}*/
+        /*.banner .turnplate canvas.item{width:100%;}*/
+        /*.banner .turnplate img.pointer{position:absolute;width:36%;height:40%;left:32%;top:28%;}*/
+        canvas.item{width:110%;}
+    </style>
         <script type="text/javascript">
             var turnplate={
                 restaraunts:[],				//大转盘奖品名称
@@ -563,122 +678,7 @@
 
 
         </script>
-    <style>
-       body{
-            width: 100%;
-            max-width: 640px;
-            margin: 0 auto;
-            overflow-y: auto;
-            min-height: 100%;
-            background-color: #e81b1b;
-            font-family: '微软雅黑';
-        }
-       .load7{
-           color:#fff;
-           position: absolute;
-           z-index: 999;
-           width: 100%;
-           margin:0 auto;
-           height: 100%;
-           background: #e81b1b;
-           vertical-align: middle;
-           padding-top: 45%;
-       }
-        .wrapper {
-            width: 100%;
-            margin: 0 auto;
-            max-width: 640px;
-            overflow: hidden;
-            position: relative;
-        }
-        .wrapperfoot{
-
-           margin-top: -3rem;
-        }
-        .footer-title{
-            width: 50%;
-            max-width: 640px;
-            color: #fff;
-            text-align: center;
-            font-size: 0.6rem;
-            margin: -0.3rem auto 0.2rem auto;
-            padding: 0.6rem 0px;
-            font-family: '微软雅黑';
-            letter-spacing: 2px;
-            background-color: #c71717;
-           /* border: 1px solid #ffb820;*/
-            border-radius: 2rem;
-        }
-       .footer-title h6{
-           width: 80%;
-           padding-top:1px;
-           overflow-x: hidden;
-           white-space: nowrap;
-           text-overflow: ellipsis;
-           margin: 0 auto;
-       }
-        .footer-title h6 span{
-            color: #ffb820;
-        }
-        .footer-content{
-            width: 70%;
-            max-width: 640px;
-            color: #fab120;
-            margin: 0px auto 2rem auto;
-            padding: 10px 5%;
-            line-height: 2rem;
-            font-size: 0.5rem;
-            font-family: '微软雅黑';
-            background-color: #b21b1b;
-        }
-        .footer-hr-title{
-            width: 80%;
-            height:2px;
-            max-width: 640px;
-            color: #fff;
-            margin: 2rem auto 1rem auto;
-            text-align: center;
-            font-size: 0.8rem;
-            font-family: '微软雅黑';
-            background-color: #ffb820;
-        }
-        .footer-hr-title p{
-
-            position: relative;
-            top:-10px;
-            background-color: #e81b1b;
-            margin: 0 auto;
-            height: 20px;
-            line-height: 20px;
-            width: 120px;
-            text-overflow: ellipsis;
-            color: #ffb820;
-            font-size: 0.7rem;
-            letter-spacing: 2px;
-        }
-        #mark{width: 100%;height: 100%;background: rgba(0,0,0,0.5);position: fixed;top: 0;left: 0;display: none;z-index: 10;}
-        .layerbox{position:absolute;top:0;left:2.5rem;width:100%;display: none;}
-        .layerbox-flag{position:relative;width:20%;margin:0 auto;top:2rem;z-index: 999;}
-        .layerbox-close{width: 1rem;position: absolute;right: 5px;top: 5px;z-index: 999;float: right;}
-        .layerbox-content{width: 60%;height: auto;text-align:center;background: #fff url("yes.png") no-repeat 1em 1em;background-size:20% 20%;padding:3em 2em 1em 2em;position: relative;z-index:998;margin: 0 auto;-webkit-background-clip: padding-box;background-clip: padding-box;border: 1px solid rgba(0,0,0,.2);border-radius: 6px;outline: 0;-webkit-box-shadow: 0 3px 9px rgba(0,0,0,.5);box-shadow: 0 3px 9px rgba(0,0,0,.5);}
-        .firstp{width:100%;font-size: 0.8rem;padding-bottom: 1em;text-overflow:ellipsis; -o-text-overflow:ellipsis;white-space:nowrap;}
-        .singlep{width:100%;font-size: 0.7rem;color: #666;text-overflow:ellipsis; -o-text-overflow:ellipsis;white-space:nowrap;}
-        .layerbox-content span{color: #f22020}
-       .layerbox-content h3{width:100%;font-size: 0.8rem;padding-bottom: 1em;text-overflow:ellipsis; -o-text-overflow:ellipsis;white-space:nowrap;}
-        /*.layerbox-content h5{position: relative;bottom: -1em;}*/
-        .redtext{color: #f22020}
-        .top2em{padding-top: 2em;padding-bottom: 1em}
-        #qrdh{width:80%;padding:1em;background-color: #ffb820;border-radius: 2rem;color: #fff;border:0;outline: none;}
-        #wzdl{width:80%;padding:1em;background-color: #ffb820;border-radius: 2rem;color: #fff;border:0;outline: none;}
-        .coinsl{width: 4rem;height:1.6em;border:0;text-align: center;z-index: 999;position: relative;padding: 0.5em;outline: none;}
-        .reduce{width: 2rem;height:2.5em;overflow:hidden;text-align:left;background-color: #ffb820;border-radius: 2rem;color: #fff;border:0;outline: none;position: relative;right: -1.2rem;top: 0}
-        .add{width: 2rem;height:2.5em;overflow:hidden;text-align:right;background-color: #ffb820;border-radius: 2rem;color: #fff;border:0;outline: none;position: relative;left:-1.2rem;top: 0}
-        /*.banner{display:block;width:80%;margin-left:auto;margin-right:auto;margin-bottom: 20px;}*/
-        /*.banner .turnplate{display:block;width:100%;position:relative;}*/
-        /*.banner .turnplate canvas.item{width:100%;}*/
-        /*.banner .turnplate img.pointer{position:absolute;width:36%;height:40%;left:32%;top:28%;}*/
-        canvas.item{width:110%;}
-    </style>
+    
 </head>
 
 <body>
