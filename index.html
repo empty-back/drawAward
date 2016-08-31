@@ -584,6 +584,7 @@
         rootResize();
         $(window).scroll(function(){
             var dcrollHei=$(window).scrollTop();
+            $(document).css({"height":documentHei,"overflow":"hidden"});
             if(dcrollHei>documentHei){
 
                 $("body").css("overflow","hidden");
