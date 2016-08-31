@@ -335,6 +335,11 @@
             //页面所有元素加载完毕后执行drawRouletteWheel()方法对转盘进行渲染
             window.onload=function(){
                 drawRouletteWheel();
+                $("body").css("overflow","auto");
+
+            };
+            $(function(){
+
                 if($(".load7").css("display")=="block"){
 
                     $("body").css("overflow","hidden");
@@ -344,9 +349,6 @@
                     $("body").css("overflow","auto");
 
                 }
-
-            };
-            $(function(){
                 var rootHtml = $(':root');
                 rootResize = function() {
                     var m_top = $(window).height()/4+$(window).scrollTop();
