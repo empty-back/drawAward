@@ -577,12 +577,21 @@
         };
         rootScroll = function(){
 
-            $(".load7").css({'top': $(window).height()/2 +'px',"height":$(window).height()+'px'});
+            $(".load7").css({'top': $(window).scrollTop() +'px',"height":$(window).height()+'px'});
         };
         rootScroll();
         rootResize();
         $(window).scroll(function(){
+            var documentHei=$(document).height();
+            var dcrollHei=$(window).scrollTop();
+            if(dcrollHei>documentHei){
 
+                $("body").css("overflow","hidden");
+            }else{
+
+                $("body").css("overflow","auto");
+
+            }
             rootScroll();
 
         })
