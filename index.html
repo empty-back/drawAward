@@ -566,7 +566,7 @@
 
     };
     $(function(){
-        var documentHei=$(document).height();
+
         var rootHtml = $(':root');
         rootResize = function() {
             var m_top = $(window).height()/4+$(window).scrollTop();
@@ -578,24 +578,23 @@
         };
         rootScroll = function(){
 
-            $(".load7").css({'top': $(window).scrollTop() +'px',"height":$(window).height()+'px'});
+            $(".load7").css({"height":$(window).height()+'px'});
         };
         rootScroll();
         rootResize();
-        $(window).scroll(function(){
-            var dcrollHei=$(window).scrollTop();
-            $(document).css({"height":documentHei,"overflow":"hidden"});
-            if(dcrollHei>documentHei){
+        if($(".load7").css("display")=="block"){
 
-                $("body").css("overflow","hidden");
-            }else{
+            $("body").css("overflow","hidden");
 
-                $("body").css("overflow","auto");
+        }else{
 
-            }
-            rootScroll();
+            $("body").css("overflow","auto");
 
-        })
+        }
+//        $(window).scroll(function(){
+//            rootScroll();
+//
+//        })
         $(window).resize(function() {
             rootResize();
         });
