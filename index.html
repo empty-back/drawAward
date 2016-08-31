@@ -31,7 +31,7 @@
 
             $(document).ready(function(){
                 //$(".load7").show();
-                setTimeout(function(){ $(".load7").fadeOut("fast"); $("body").css("overflow","auto");},1000);
+                setTimeout(function(){ $(".load7").fadeOut("fast"); $("body").css("overflow","auto");$(".wrapper,[class^='footer']").show();},1000);
 
                 audioEngine.init('1.mp3');
                 //动态添加大转盘的奖品与奖品区域背景颜色
@@ -342,6 +342,7 @@
 
                 if($(".load7").css("display")=="block"){
 
+                    $(".wrapper,[class^='footer']").hide();
                     $("body").css("overflow","hidden");
 
                 }else{
