@@ -566,6 +566,7 @@
 
     };
     $(function(){
+        var documentHei=$(document).height();
         var rootHtml = $(':root');
         rootResize = function() {
             var m_top = $(window).height()/4+$(window).scrollTop();
@@ -582,7 +583,6 @@
         rootScroll();
         rootResize();
         $(window).scroll(function(){
-            var documentHei=$(document).height();
             var dcrollHei=$(window).scrollTop();
             if(dcrollHei>documentHei){
 
