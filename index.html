@@ -261,7 +261,7 @@
         //$(".load7").show();
         //setTimeout(function(){ $(".load7").fadeOut("fast");},1000);
         if($(".load7").css("display")=="block"){
-          
+
             $("body").css("overflow","hidden");
 
         }else{
@@ -587,7 +587,7 @@
         };
         rootScroll = function(){
 
-            $(".load7").css({"height":$(window).height()+'px'});
+            $(".load7").css({"height":$(document).height()+'px'});
         };
         rootScroll();
         rootResize();
