@@ -334,9 +334,7 @@
 
             //页面所有元素加载完毕后执行drawRouletteWheel()方法对转盘进行渲染
             window.onload=function(){
-                drawRouletteWheel();
-
-
+               setTimeout(function(){drawRouletteWheel();},100);
             };
             $(function(){
 
