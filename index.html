@@ -454,12 +454,12 @@
                         //console.log(text.length);
                         /** 下面代码根据奖品类型、奖品名称长度渲染不同效果，如字体、颜色、图片效果。(具体根据实际情况改变) **/
                         function changeLine(word){
-                            ctx.font='normal 16px Microsoft YaHei';
+                            ctx.font='normal 16px Microsoft YaHei!important';
                             if(text.indexOf(word)>0){//判断字符进行换行
 
                                 var texts = text.split(word);
                                 for(var j = 0; j<texts.length; j++){
-                                    ctx.font = j == 0?'normal 16px Microsoft YaHei':'normal 16px Microsoft YaHei';
+                                    ctx.font = j == 0?'normal 16px Microsoft YaHei!important':'normal 16px Microsoft YaHei!important';
                                     if(j == 0){
                                         ctx.fillText(texts[j]+word, -ctx.measureText(texts[j]+word).width / 2, j * line_height);
                                     }else{
